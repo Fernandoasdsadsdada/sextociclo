@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mostrarInventario()">Ver/agregar</button>
+    <button onclick="eliminar()">Eleminar Ultimo</button>
+    <button onclick="buscar()">Busqueda</button>
+</body>
+<script>
+    let Inventario=["Laptop","Mouse","Teclado"];
+    function mostrarInventario(){
+        console.log(Inventario);
+
+        let agregar = prompt("Ingresa el producto");
+        if(agregar){
+            Inventario.push(agregar);
+            console.log("Inventario agregado",Inventario);
+            alert("Producto agregado con exito ")
+        }
+    }
+    function eliminar(){
+        if(Inventario.length>0){
+            let eleminado=Inventario.pop();
+            console.log("Producto eliminado", eleminado);
+            console.log("Producto restante", Inventario);
+            alert("Se elemino el producto : "+ eleminado);
+            
+
+        }else{
+            alert("El inventario no lo encontro")
+        }
+    }
+    function buscar(){
+        let Busqueda= prompt("ingrese el producto");
+        
+        if(Busqueda){
+            if(Inventario.includes(Busqueda)){
+                alert("Encontrado el producto : " + Busqueda);
+            }else{
+                alert("producto no encontrado")
+            }
+
+        }
+    }
+    
+</script>
+</html>

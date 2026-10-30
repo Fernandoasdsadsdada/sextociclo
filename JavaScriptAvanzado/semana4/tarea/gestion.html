@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Gestion()">Gestiona</button>
+    
+    <script>
+        function Gestion(){
+            let tareas=["Pan","Queso","Lomo"];
+            console.log(tareas)
+
+            
+            let NuevaLista=prompt("ingrese nueva lista ");
+            if(NuevaLista){
+                tareas.push(NuevaLista)
+            }
+            console.log("Arregñp despues de agregar:",tareas)
+
+            let eliminada=tareas.pop();
+            console.log("Se elimino la tarea : ", eliminada)
+
+            let buscar=prompt("Que tarea deseas buscar en la lista ? :")
+            if(tareas.includes(buscar)){
+                alert("La tarea"+buscar+ "Nose encuentra en el arreglo");
+            }
+            console.log("Lista final de tareas :",tareas);
+            alert("Proceso")
+
+
+        }
+    </script>
+
+</body>
+</html>

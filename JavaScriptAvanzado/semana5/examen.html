@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Inventario()">Inventario</button>
+    <button onclick="Eliminar()">Eliminar</button>
+    <button onclick="Busqueda()">Busqueda</button>
+    <script>
+
+        l
+        function Inventario(){
+            let Inventario=["Laptop","Mouse","Teclado"];
+            console.log(Inventario)
+
+            let agregar=prompt("Ingrese el producto");
+             
+            Inventario.push(agregar);
+            console.log(Inventario);
+
+
+        }
+        function Eliminar(){
+            let eleminarA= prompt("Ingrese el producto a eleminar")
+
+            if(eleminarA===Inventario){
+                Inventario.pop(eleminarA)
+                console.log("Producto eliminado",eleminarA);
+            }else{
+                if(Inventario!=eleminarA){
+                    console.log("nose escontro el producto")
+                }
+            }
+        }
+        function Busqueda(Inventario){
+            let busqueda= prompt("Ingrese su producto");
+            let productoencontrado=Boolean;
+
+            if(busqueda===Inventario){
+                alert("Encontre el producto")
+            }else{
+                alert("Prodcuto no encontrado")
+            }
+
+        }
+        
+    </script>
+    
+</body>
+</html>
